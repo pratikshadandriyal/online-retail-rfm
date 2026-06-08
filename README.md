@@ -99,6 +99,26 @@ online-retail-rfm/
 │   └── rfm_segments.csv           ← final scored customer table
 └── README.md
 ```
+# Data
+
+## Raw data
+The raw dataset `online_retail_II.xlsx` is not stored in this repository due to file size.
+
+Download it directly from the original source:
+→ https://archive.ics.uci.edu/dataset/502/online+retail+ii
+
+Place it in this `data/` folder before running `notebooks/01_cleaning.ipynb`.
+
+## Processed data
+| File | Description | Size |
+|---|---|---|
+| `clean_retail.csv.gz` | Cleaned dataset output from notebook 1 (805,549 rows) | 14MB |
+| `rfm_segments.csv` | Final RFM scored customer table (5,878 rows) | 241KB |
+
+`clean_retail.csv.gz` can be read directly in pandas without unzipping:
+```python
+df = pd.read_csv('clean_retail.csv.gz')
+```
 
 ---
 
